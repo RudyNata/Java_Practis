@@ -1,6 +1,6 @@
 package org.example;
 import java.util.Arrays;
-public class HomeWork {
+public class HomeWork1Lesson {
 
         public static void main(String[] args) {
             System.out.println(isSumBetween10And20(5, 15)); // true
