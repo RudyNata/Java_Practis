@@ -7,10 +7,10 @@ import java.util.List;
 public class HomeWork3Lesson {
     public static void main(String[] args){
         // 1. Дан список ArrayList<Integer> целых чисел. Удалить из него нечетные числа
-//        ArrayList<Integer> numbers = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11));
-//        System.out.println(numbers);
-//        oddNumbers(numbers);
-//        System.out.println(numbers);
+        ArrayList<Integer> numbers = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11));
+        System.out.println(numbers);
+        oddNumbers(numbers);
+        System.out.println(numbers);
 
         // 2. Дан список ArrayList<String>. Удалить из него все строки, которые являются числами.
         // Пример: ArrayList<String> = new ArrayList<>(List.of("string", "s", "5", "10", "-12", "my_value"));
@@ -29,13 +29,16 @@ public class HomeWork3Lesson {
         }
     }
 
-    private static void removeNumbers(ArrayList<String> str){
-        String listString = str.toString();
-        System.out.println(str.removeIf(x -> x == "\\d" ));
-//        for(int i = 0; i < str.size(); i++) {
-//            if (str.get(i) == "\\d") {
-//                str.remove(i);
-//            }
-//        }
+    private static ArrayList<String> removeNumbers(ArrayList<String> str){
+        String[] listString = str.toArray(new String[str.size()]);
+        str.clear();
+        for (int i = 0; i < listString.length; i++) {
+            try {
+                Integer.parseInt(listString[i]);
+            } catch (NumberFormatException e) {
+                str.add(listString[i]);
+            }
+        }
+        return str;
     }
 }

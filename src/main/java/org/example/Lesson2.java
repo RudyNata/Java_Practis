@@ -1,6 +1,6 @@
 package org.example;
 
-public class Lesson2Task {
+public class Lesson2 {
     // Работа с файлами:
     // FileInputStream fileInputStream = new FileInputStream("file.txt");
     // byte[] bytes = new byte[100];

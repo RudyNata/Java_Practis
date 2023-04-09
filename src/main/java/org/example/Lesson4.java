@@ -3,7 +3,7 @@ package org.example;
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class ListWorkTime {
+public class Lesson4 {
 
     public static final int SIZE = 1000000;
     public static void main(String[] str) {

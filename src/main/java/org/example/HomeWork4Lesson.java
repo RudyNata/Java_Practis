@@ -26,13 +26,12 @@ public class HomeWork4Lesson {
                         System.out.println("No word");
                     }
                 } else {
-                    System.out.println(list.size());
+//                    System.out.println(list.size());
                     if (list.size() <= Integer.parseInt(firstArray[1])) {
                         while (list.size() <= Integer.parseInt(firstArray[1])) {
                             list.add(null);
                         }
                     }
-                    System.out.println(list.size());
                     for (int i = 0; i < list.size(); i++) {
                         list.set(Integer.parseInt(firstArray[1]), firstArray[0]);
                     }
